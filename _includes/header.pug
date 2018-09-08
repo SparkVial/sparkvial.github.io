@@ -1,7 +1,7 @@
 | {% assign prefix = '' %}
 | {% assign lang = page.url | split: "/" | slice: 1 %}
 | {% assign lang = lang.first %}
-| {% if lang contains 'he' %}
+| {% if lang == 'he' %}
 |   {% assign prefix = '/he' %}
 | {% else %}
 |   {% assign lang = 'en' %}
@@ -16,7 +16,7 @@ nav#topbar
     a.menulink(href="{{prefix}}/products/") Products
     a.menulink(href="{{prefix}}/blog/") Blog
     a.menulink(href="{{prefix}}/download/") Download
-    a.menulink(href="{{prefix}}/contact/") Contact
+    a.menulink(href="{{prefix}}/help/") Help
     span#topbar-side
         a.menulink(href="/languages/")
             img(src="/res/globe.svg")
@@ -36,7 +36,7 @@ nav#topbar
         a.menulink(href="{{prefix}}/products/") Products
         a.menulink(href="{{prefix}}/blog/") Blog
         a.menulink(href="{{prefix}}/download/") Download
-        a.menulink(href="{{prefix}}/contact/") Contact
+        a.menulink(href="{{prefix}}/help/") Help
         a.menulink(href="/languages/")
             img(src="/res/globe.svg")
             span#currlang {{ lang | upcase }}
