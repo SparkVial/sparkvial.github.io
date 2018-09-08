@@ -1,0 +1,101 @@
+
+@import '_sass/colors';
+
+#topbar, #mobile-topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    text-align: center;
+    color: $contrast-neg-color;
+    background: $bgcolor;
+    z-index: 1;
+}
+
+#topbar {
+    display: block;
+    height: var(--topbar-height);
+}
+
+.menulink {
+    padding: calc((var(--topbar-height) - 1.7rem) / 2) 1.5rem;
+    line-height: var(--topbar-height);
+    font-size: 1.7rem;
+    color: $contrast-neg-color;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0 0rem 0.5rem -0.5rem $box-shadow-color;
+    transition: box-shadow 0.3s, background-color 0.3s;
+    z-index: 2;
+    font-weight: lighter;
+}
+
+#topbar > .menulink:first-child {
+    font-weight: normal;
+}
+
+.menulink > img {
+    position: relative;
+    top: 0.15rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding-right: 0.75rem;
+}
+
+.menulink:hover, .menulink:active {
+    background: $contrast-color;
+    box-shadow: 0 0.6rem 2rem -0.5rem $box-shadow-color;
+    transition: box-shadow 0.15s, background-color 0.15s;
+}
+
+#topbar-side {
+    /* position: fixed; */
+    /* top: 0; */
+    /* right: 0; */
+    float: right;
+    height: var(--topbar-height);
+    z-index: 3;
+}
+
+.menubtn {
+    /* width: 3.6rem; */
+    height: var(--topbar-height);
+    margin: 0;
+    padding: calc((var(--topbar-height) - 1.5rem) / 2) 1.5rem;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: 'Yanone Kaffeesatz', 'Varela Round', sans-serif;
+    font-size: 1.3rem;
+    // display: flex;
+    box-shadow: 0 0rem 0.5rem -0.5rem $box-shadow-color;
+    transition: box-shadow 0.3s, background-color 0.3s;
+}
+
+.menubtn:hover, .menubtn:active  {
+    background: $contrast-color;
+    box-shadow: 0 0.6rem 2rem -0.5rem $box-shadow-color;
+    transition: box-shadow 0.15s, background-color 0.15s;
+}
+
+.menubtn > span {
+    margin-left: 0.3rem;
+}
+
+.menubtn > img {
+    width: 16px;
+    height: 16px;
+}
+
+.lowered-icon {
+    position: relative;
+    top: 0.15rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    padding-right: 0.75rem;
+
+    // fill: red;
+    // stroke: blue;
+}

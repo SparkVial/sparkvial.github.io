@@ -1,0 +1,193 @@
+:root {
+  --font: 'Yanone Kaffeesatz', 'Varela Round', sans-serif;
+  --topbar-height: 3.6rem;
+  --article-font-size: 1.7rem; }
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+body {
+  background: #f1f1f1;
+  font-family: var(--font);
+  color: var(--txtcolor);
+  padding: 3rem 1rem 6rem 1rem;
+  margin: 0; }
+
+body > article {
+  max-width: 100%;
+  width: 60rem;
+  margin: 0 auto;
+  font-size: var(--article-font-size);
+  text-align: justify; }
+
+h1 {
+  text-align: center; }
+
+#topbar, #mobile-topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #000;
+  background: #f1f1f1;
+  z-index: 1; }
+
+#topbar {
+  display: block;
+  height: var(--topbar-height); }
+
+.menulink {
+  padding: calc((var(--topbar-height) - 1.7rem) / 2) 1.5rem;
+  line-height: var(--topbar-height);
+  font-size: 1.7rem;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 0rem 0.5rem -0.5rem #bababa;
+  transition: box-shadow 0.3s, background-color 0.3s;
+  z-index: 2;
+  font-weight: lighter; }
+
+#topbar > .menulink:first-child {
+  font-weight: normal; }
+
+.menulink > img {
+  position: relative;
+  top: 0.15rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding-right: 0.75rem; }
+
+.menulink:hover, .menulink:active {
+  background: #fff;
+  box-shadow: 0 0.6rem 2rem -0.5rem #bababa;
+  transition: box-shadow 0.15s, background-color 0.15s; }
+
+#topbar-side {
+  /* position: fixed; */
+  /* top: 0; */
+  /* right: 0; */
+  float: right;
+  height: var(--topbar-height);
+  z-index: 3; }
+
+.menubtn {
+  /* width: 3.6rem; */
+  height: var(--topbar-height);
+  margin: 0;
+  padding: calc((var(--topbar-height) - 1.5rem) / 2) 1.5rem;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: 'Yanone Kaffeesatz', 'Varela Round', sans-serif;
+  font-size: 1.3rem;
+  box-shadow: 0 0rem 0.5rem -0.5rem #bababa;
+  transition: box-shadow 0.3s, background-color 0.3s; }
+
+.menubtn:hover, .menubtn:active {
+  background: #fff;
+  box-shadow: 0 0.6rem 2rem -0.5rem #bababa;
+  transition: box-shadow 0.15s, background-color 0.15s; }
+
+.menubtn > span {
+  margin-left: 0.3rem; }
+
+.menubtn > img {
+  width: 16px;
+  height: 16px; }
+
+.lowered-icon {
+  position: relative;
+  top: 0.15rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  padding-right: 0.75rem; }
+
+#mobile-topbar {
+  display: none;
+  font-size: calc(1.7rem * 0.8);
+  line-height: calc(var(--topbar-height) * 0.8); }
+
+#mobile-topbar > svg {
+  height: 1.5rem; }
+
+#mobile-menu {
+  display: none;
+  position: fixed;
+  top: calc(var(--topbar-height) * 0.8 - 1px);
+  left: 0;
+  background: #f1f1f1;
+  min-width: 35vw;
+  box-shadow: 0 0.3rem 1rem 0rem #878787;
+  z-index: 5; }
+
+#mobile-topbar .lowered-icon {
+  top: 0.25rem; }
+
+#menu-icon-bg {
+  position: fixed;
+  height: calc(var(--topbar-height) * 0.8);
+  width: calc(var(--topbar-height) * 0.8);
+  top: 0;
+  left: 0;
+  background: #f1f1f1;
+  z-index: 3; }
+
+#menu-toggle:checked ~ #menu-icon-bg {
+  box-shadow: 0 0 1rem -0.3rem #878787; }
+
+#menu-icon {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: calc(((var(--topbar-height) * 0.8) - 1.5rem) / 2);
+  line-height: initial;
+  font-size: initial;
+  cursor: pointer;
+  z-index: 4; }
+
+#menu-icon img {
+  display: block;
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer; }
+
+#menu-toggle {
+  position: fixed;
+  top: -99999px;
+  left: -99999px; }
+
+#menu-toggle:checked ~ #mobile-menu {
+  display: block; }
+
+#menu-toggle:checked ~ #menu-icon {
+  padding-right: 100vw;
+  padding-bottom: 100vh; }
+
+#mobile-menu .menulink {
+  display: block;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important; }
+
+#mobile-menu .menubtn {
+  display: block;
+  width: 100%; }
+
+@media only screen and (max-width: 765px) {
+  #topbar {
+    display: none !important; }
+  #topbar-side {
+    display: none !important; }
+  #mobile-topbar {
+    display: block !important; }
+  body {
+    padding-top: calc((var(--topbar-height) / 2)) !important; }
+  :root {
+    --article-font-size: calc(4.895vw); } }
+
+@media only screen and (max-width: 425px) {
+  :root {
+    --article-font-size: 1.3rem; } }
