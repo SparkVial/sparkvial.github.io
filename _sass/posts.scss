@@ -1,3 +1,69 @@
+@import '_sass/colors';
+
 h1 {
     text-align: center;
+    font-size: calc(var(--article-font-size) * 1.4);
+}
+
+h2 {
+    font-size: calc(var(--article-font-size) * 1.2);
+}
+
+h1, h2 {
+    margin-bottom: 0.1rem;
+}
+
+p, ul {
+    margin-top: 0;
+}
+
+.inline-icon {
+    height: 0.77em;
+    margin: 0 0.15em;
+}
+
+ul {
+    -webkit-padding-start: 0.7em;
+}
+
+.card-list {
+    display: flex;
+    flex-direction: row;
+    justify-items: stretch;
+    flex-wrap: wrap;
+}
+
+.card-link {
+    position: relative;
+    top: 0;
+
+    display: inline-block;
+    text-decoration: none;
+    color: $txtcolor;
+    background: lighten($bgcolor, 10%);
+    border-radius: 0.4em;
+
+    box-shadow: 0 0.6rem 2rem -0.5rem #bababa;
+
+    padding: 0.6em;
+    box-sizing: border-box;
+    width: calc(50% - 2 * 0.3em);
+    margin: 0.3em;
+
+    transition: top 0.2s, box-shadow 0.2s;
+}
+
+.card-link:hover {
+    top: -0.3em;
+    box-shadow: 0 0.6rem 2.3rem -0.5rem darken(#bababa, 30%);
+}
+
+@media only screen and (max-width: 765px) {
+    .card-link {
+        width: calc(100% - 2 * 0.3em) !important;
+    }
+}
+
+.card-link > h2 {
+    margin-top: 0.1rem;
 }

@@ -8,19 +8,25 @@
 | {% endif %}
 //- | {% assign lang = url.first %}
 
+mixin menu
+    a.menulink(href="{{prefix}}/products/") Products
+    a.menulink(href="{{prefix}}/blog/") Blog
+    //- a.menulink(href="{{prefix}}/download/") Download
+    a.menulink(href="{{prefix}}/links/") Links
+
+mixin menu-side
+    //- a.menulink(href="/languages/")
+    //-     img(src="/res/globe.svg")
+    //-     span#currlang {{ lang | upcase }}
+
 nav#topbar
-    a.menulink.selected(href="{{prefix}}/")
+    a.menulink(href="{{prefix}}/")
         object.lowered-icon(type="image/svg+xml", data="/res/logo.svg")
         //- img(src="/res/logo.svg")
         | SparkVial
-    a.menulink(href="{{prefix}}/products/") Products
-    a.menulink(href="{{prefix}}/blog/") Blog
-    a.menulink(href="{{prefix}}/download/") Download
-    a.menulink(href="{{prefix}}/help/") Help
+        +menu
     span#topbar-side
-        a.menulink(href="/languages/")
-            img(src="/res/globe.svg")
-            span#currlang {{ lang | upcase }}
+        +menu-side
 #mobile-topbar
     input#menu-toggle(type="checkbox")
     label#menu-icon(for="menu-toggle")
@@ -33,10 +39,5 @@ nav#topbar
     #menu-icon-bg
     nav#mobile-menu
         a.menulink(href="{{prefix}}/") Home
-        a.menulink(href="{{prefix}}/products/") Products
-        a.menulink(href="{{prefix}}/blog/") Blog
-        a.menulink(href="{{prefix}}/download/") Download
-        a.menulink(href="{{prefix}}/help/") Help
-        a.menulink(href="/languages/")
-            img(src="/res/globe.svg")
-            span#currlang {{ lang | upcase }}
+        +menu
+        +menu-side

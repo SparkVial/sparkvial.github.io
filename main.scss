@@ -25,8 +25,8 @@
 body {
     background: $bgcolor;
     font-family: var(--font);
-    color: var(--txtcolor);
-    padding: 3rem 1rem 6rem 1rem;
+    color: $txtcolor;
+    padding: var(--topbar-height) 1rem 6rem 1rem;
     margin: 0;
 }
 
@@ -36,6 +36,7 @@ body > article {
     margin: 0 auto;
     font-size: var(--article-font-size);
     text-align: justify;
+    line-height: 1.4;
 }
 
 @import '_sass/posts';
@@ -57,7 +58,7 @@ body > article {
     }
 
     body {
-        padding-top: calc((var(--topbar-height) / 2)) !important;
+        // padding-top: calc((var(--topbar-height) / 2)) !important;
     }
 
     :root {

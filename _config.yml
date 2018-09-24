@@ -22,6 +22,10 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  wazzaps
+destination: ../website_dest
+
+#jekyll-bliss:
+#  watch: true
 
 collections:
   posts:
@@ -30,11 +34,14 @@ collections:
 
 # Build settings
 markdown: kramdown
+
+kramdown:
+  parse_block_html: true
+
 plugins:
   - jekyll-pug
 
-destination: docs
-exclude: [docs, Gemfile, Gemfile.lock, README.md, LICENSE]
+exclude: [Gemfile, Gemfile.lock, README.md, LICENSE]
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
