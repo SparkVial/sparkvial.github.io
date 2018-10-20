@@ -14,6 +14,13 @@ mixin menu
     //- a.menulink(href="{{prefix}}/download/") Download
     a.menulink(href="{{prefix}}/links/") Links
 
+mixin logo
+    svg.lowered-icon(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 146.5 167.8')
+        g(transform='translate(-89.1 -67.7)')
+            path#pth1(d='M154 81.6L99 177.2a35.5 35.5 0 1 0 61.6 35.5l55.2-95.6z', fill='none', stroke='#FF7B0F', stroke-width='10', stroke-linecap='round')
+            path(fill='#FF7B0F', d='M133.4 145.4L111 184.2a21.2 21.2 0 0 0 7.9 29.4c10.6 6.1 23.4 2.7 29.5-7.9l34.8-60.3z')
+            rect(fill='#FF7B0F', transform='rotate(30)', ry='4.9', y='-11.8', x='152.3', height='10.8', width='114.9')
+
 mixin menu-side
     //- a.menulink(href="/languages/")
     //-     img(src="/res/globe.svg")
@@ -21,8 +28,7 @@ mixin menu-side
 
 nav#topbar
     a.menulink(href="{{prefix}}/")
-        object.lowered-icon(type="image/svg+xml", data="/res/logo.svg")
-        //- img(src="/res/logo.svg")
+        +logo
         | SparkVial
         +menu
     span#topbar-side
@@ -34,7 +40,7 @@ nav#topbar
         img(src="/res/ham_menu.svg")
         //- svg(xmlns="http://www.w3.org/2000/svg", xmlns:xlink="http://www.w3.org/1999/xlink", height="32px", version="1.1", viewBox="0 0 32 32", width="32px", xml:space="preserve")
         //-     path(xmlns="http://www.w3.org/2000/svg", d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z")
-    object.lowered-icon(type="image/svg+xml", data="/res/logo.svg")
+    +logo
     | SparkVial
     #menu-icon-bg
     nav#mobile-menu

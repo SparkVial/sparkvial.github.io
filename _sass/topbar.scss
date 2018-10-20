@@ -8,28 +8,37 @@
     right: 0;
 
     text-align: center;
-    color: $contrast-neg-color;
-    background: $bgcolor;
+    color: $topbar-txtcolor;
+    background: $topbar-bgcolor;
     z-index: 1;
 }
 
 #topbar {
     display: block;
-    height: var(--topbar-height);
+    // height: var(--topbar-height);
 }
 
 .menulink {
-    padding: calc((var(--topbar-height) - 1.7rem) / 2) 1.5rem;
+    display: inline-block;
+    padding: 0 1.5rem;
+    height: var(--topbar-height);
     line-height: var(--topbar-height);
     font-size: 1.7rem;
-    color: $contrast-neg-color;
+    color: $topbar-txtcolor;
     text-decoration: none;
     cursor: pointer;
     user-select: none;
-    box-shadow: 0 0rem 0.5rem -0.5rem $box-shadow-color;
-    transition: box-shadow 0.3s, background-color 0.3s;
+    transition: background-color 0.3s;
     z-index: 2;
     font-weight: lighter;
+}
+
+.logo-fill {
+    fill: $topbar-txtcolor;
+}
+
+.logo-stroke {
+    stroke: $topbar-txtcolor;
 }
 
 #topbar > .menulink:first-child {
@@ -45,9 +54,7 @@
 }
 
 .menulink:hover, .menulink:active {
-    background: $contrast-color;
-    box-shadow: 0 0.6rem 2rem -0.5rem $box-shadow-color;
-    transition: box-shadow 0.15s, background-color 0.15s;
+    background: $topbar-hovcolor;
 }
 
 #topbar-side {
@@ -75,7 +82,7 @@
 }
 
 .menubtn:hover, .menubtn:active  {
-    background: $contrast-color;
+    background: $topbar-hovcolor;
     box-shadow: 0 0.6rem 2rem -0.5rem $box-shadow-color;
     transition: box-shadow 0.15s, background-color 0.15s;
 }

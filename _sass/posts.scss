@@ -1,5 +1,16 @@
 @import '_sass/colors';
 
+p > img {
+    display: block;
+    max-height: 60vh;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 1vh;
+    box-shadow: 0 0.6rem 2.3rem -0.5rem darken($box-shadow-color, 30%);
+}
+
 h1 {
     text-align: center;
     font-size: calc(var(--article-font-size) * 1.4);
@@ -9,7 +20,11 @@ h2 {
     font-size: calc(var(--article-font-size) * 1.2);
 }
 
-h1, h2 {
+h3 {
+    font-size: calc(var(--article-font-size) * 1);
+}
+
+h1, h2, h3 {
     margin-bottom: 0.1rem;
 }
 
@@ -24,6 +39,10 @@ p, ul {
 
 ul {
     -webkit-padding-start: 0.7em;
+}
+
+.center {
+    text-align: center;
 }
 
 .card-list {
@@ -43,7 +62,7 @@ ul {
     background: lighten($bgcolor, 10%);
     border-radius: 0.4em;
 
-    box-shadow: 0 0.6rem 2rem -0.5rem #bababa;
+    box-shadow: 0 0.6rem 2rem -0.5rem $box-shadow-color;
 
     padding: 0.6em;
     box-sizing: border-box;
@@ -55,7 +74,7 @@ ul {
 
 .card-link:hover {
     top: -0.3em;
-    box-shadow: 0 0.6rem 2.3rem -0.5rem darken(#bababa, 30%);
+    box-shadow: 0 0.6rem 2.3rem -0.5rem darken($box-shadow-color, 30%);
 }
 
 @media only screen and (max-width: 765px) {

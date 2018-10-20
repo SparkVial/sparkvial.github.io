@@ -39,6 +39,10 @@ body > article {
     line-height: 1.4;
 }
 
+a {
+    color: darken($txtcolor, 10%);
+}
+
 @import '_sass/posts';
 @import '_sass/scrollbar';
 @import '_sass/topbar';

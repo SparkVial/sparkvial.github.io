@@ -15,9 +15,8 @@
     position: fixed;
     top: calc(var(--topbar-height) * 0.8 - 1px);
     left: 0;
-    background: $bgcolor;
+    background: $topbar-bgcolor;
     min-width: 35vw;
-    box-shadow: 0 0.3rem 1rem 0rem darken($box-shadow-color, 20%);
     z-index: 5;
 }
 
@@ -31,12 +30,11 @@
     width: calc(var(--topbar-height) * 0.8);
     top: 0;
     left: 0;
-    background: $bgcolor;
     z-index: 3;
 }
 
 #menu-toggle:checked ~ #menu-icon-bg {
-    box-shadow: 0 0 1rem -0.3rem darken($box-shadow-color, 20%);
+    // box-shadow: 0 0 1rem -0.3rem darken($box-shadow-color, 20%);
 }
 
 #menu-icon {
@@ -50,6 +48,9 @@
     font-size: initial;
     cursor: pointer;
     z-index: 4;
+
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
 }
 
 #menu-icon img {
