@@ -22,6 +22,19 @@ body > article {
   text-align: justify;
   line-height: 1.4; }
 
+a {
+  color: #101010; }
+
+p > img {
+  display: block;
+  max-height: 60vh;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 1vh;
+  box-shadow: 0 0.6rem 2.3rem -0.5rem #6e6e6e; }
+
 h1 {
   text-align: center;
   font-size: calc(var(--article-font-size) * 1.4); }
@@ -29,7 +42,10 @@ h1 {
 h2 {
   font-size: calc(var(--article-font-size) * 1.2); }
 
-h1, h2 {
+h3 {
+  font-size: calc(var(--article-font-size) * 1); }
+
+h1, h2, h3 {
   margin-bottom: 0.1rem; }
 
 p, ul {
@@ -41,6 +57,9 @@ p, ul {
 
 ul {
   -webkit-padding-start: 0.7em; }
+
+.center {
+  text-align: center; }
 
 .card-list {
   display: flex;
@@ -80,26 +99,32 @@ ul {
   left: 0;
   right: 0;
   text-align: center;
-  color: #000;
-  background: #f1f1f1;
+  color: #FF7B0F;
+  background: #292929;
   z-index: 1; }
 
 #topbar {
-  display: block;
-  height: var(--topbar-height); }
+  display: block; }
 
 .menulink {
-  padding: calc((var(--topbar-height) - 1.7rem) / 2) 1.5rem;
+  display: inline-block;
+  padding: 0 1.5rem;
+  height: var(--topbar-height);
   line-height: var(--topbar-height);
   font-size: 1.7rem;
-  color: #000;
+  color: #FF7B0F;
   text-decoration: none;
   cursor: pointer;
   user-select: none;
-  box-shadow: 0 0rem 0.5rem -0.5rem #bababa;
-  transition: box-shadow 0.3s, background-color 0.3s;
+  transition: background-color 0.3s;
   z-index: 2;
   font-weight: lighter; }
+
+.logo-fill {
+  fill: #FF7B0F; }
+
+.logo-stroke {
+  stroke: #FF7B0F; }
 
 #topbar > .menulink:first-child {
   font-weight: normal; }
@@ -112,9 +137,7 @@ ul {
   padding-right: 0.75rem; }
 
 .menulink:hover, .menulink:active {
-  background: #fff;
-  box-shadow: 0 0.6rem 2rem -0.5rem #bababa;
-  transition: box-shadow 0.15s, background-color 0.15s; }
+  background: #363636; }
 
 #topbar-side {
   /* position: fixed; */
@@ -138,7 +161,7 @@ ul {
   transition: box-shadow 0.3s, background-color 0.3s; }
 
 .menubtn:hover, .menubtn:active {
-  background: #fff;
+  background: #363636;
   box-shadow: 0 0.6rem 2rem -0.5rem #bababa;
   transition: box-shadow 0.15s, background-color 0.15s; }
 
@@ -169,9 +192,8 @@ ul {
   position: fixed;
   top: calc(var(--topbar-height) * 0.8 - 1px);
   left: 0;
-  background: #f1f1f1;
+  background: #292929;
   min-width: 35vw;
-  box-shadow: 0 0.3rem 1rem 0rem #878787;
   z-index: 5; }
 
 #mobile-topbar .lowered-icon {
@@ -183,11 +205,7 @@ ul {
   width: calc(var(--topbar-height) * 0.8);
   top: 0;
   left: 0;
-  background: #f1f1f1;
   z-index: 3; }
-
-#menu-toggle:checked ~ #menu-icon-bg {
-  box-shadow: 0 0 1rem -0.3rem #878787; }
 
 #menu-icon {
   position: fixed;
@@ -197,7 +215,9 @@ ul {
   line-height: initial;
   font-size: initial;
   cursor: pointer;
-  z-index: 4; }
+  z-index: 4;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent; }
 
 #menu-icon img {
   display: block;
