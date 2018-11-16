@@ -1,7 +1,7 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta name="theme-color" content="#292929"><title>SparkVial</title><link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:300,400,700|Varela+Round&amp;subset=hebrew" rel="stylesheet"><link rel="stylesheet" type="text/css" href="/main.css"><link rel="icon" sizes="512x512" href="/favicon.png"></head><body>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta name="theme-color" content="#292929"><meta name="google-site-verification" content="Bi6J8FrwHTNO0R0jqKlnC1NJBZJ_A0CfyE8M2BS-eEg"><meta name="description" content="SparkVial aims to create Plug and play sensors which allow students and other curious minds to study the world without forking over huge sums of money or being tied down to a proprietary software suite."><title>SparkVial: Accessible Science</title><link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:300,400,700|Varela+Round&amp;subset=hebrew" rel="stylesheet"><link rel="stylesheet" type="text/css" href="/main.css"><link rel="icon" sizes="512x512" href="/favicon.png"></head><body>
 
 
-<nav id="topbar"><a class="menulink" href="/"><svg class="lowered-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 146.5 167.8"><g transform="translate(-89.1 -67.7)"><path id="pth1" d="M154 81.6L99 177.2a35.5 35.5 0 1 0 61.6 35.5l55.2-95.6z" fill="none" stroke="#FF7B0F" stroke-width="10" stroke-linecap="round"></path><path fill="#FF7B0F" d="M133.4 145.4L111 184.2a21.2 21.2 0 0 0 7.9 29.4c10.6 6.1 23.4 2.7 29.5-7.9l34.8-60.3z"></path><rect fill="#FF7B0F" transform="rotate(30)" ry="4.9" y="-11.8" x="152.3" height="10.8" width="114.9"></rect></g></svg>SparkVial<a class="menulink" href="/products/">Products</a><a class="menulink" href="/blog/">Blog</a><a class="menulink" href="/links/">Links</a></a><span id="topbar-side"></span></nav><div id="mobile-topbar"><input id="menu-toggle" type="checkbox"/><label id="menu-icon" for="menu-toggle"><img src="/res/ham_menu.svg"/></label><svg class="lowered-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 146.5 167.8"><g transform="translate(-89.1 -67.7)"><path id="pth1" d="M154 81.6L99 177.2a35.5 35.5 0 1 0 61.6 35.5l55.2-95.6z" fill="none" stroke="#FF7B0F" stroke-width="10" stroke-linecap="round"></path><path fill="#FF7B0F" d="M133.4 145.4L111 184.2a21.2 21.2 0 0 0 7.9 29.4c10.6 6.1 23.4 2.7 29.5-7.9l34.8-60.3z"></path><rect fill="#FF7B0F" transform="rotate(30)" ry="4.9" y="-11.8" x="152.3" height="10.8" width="114.9"></rect></g></svg>SparkVial<div id="menu-icon-bg"></div><nav id="mobile-menu"><a class="menulink" href="/">Home</a><a class="menulink" href="/products/">Products</a><a class="menulink" href="/blog/">Blog</a><a class="menulink" href="/links/">Links</a></nav></div><article><h1>Introduction</h1><p>I’ll explain my choices for the communication interfaces, and the architecture in general.</p>
+<nav id="topbar"><a class="menulink" href="/"><svg class="lowered-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 146.5 167.8"><g transform="translate(-89.1 -67.7)"><path id="pth1" d="M154 81.6L99 177.2a35.5 35.5 0 1 0 61.6 35.5l55.2-95.6z" fill="none" stroke="#FF7B0F" stroke-width="10" stroke-linecap="round"></path><path fill="#FF7B0F" d="M133.4 145.4L111 184.2a21.2 21.2 0 0 0 7.9 29.4c10.6 6.1 23.4 2.7 29.5-7.9l34.8-60.3z"></path><rect fill="#FF7B0F" transform="rotate(30)" ry="4.9" y="-11.8" x="152.3" height="10.8" width="114.9"></rect></g></svg>SparkVial<a class="menulink" href="/blog/">Blog</a><a class="menulink" href="/more/">More</a></a><span id="topbar-side"></span></nav><div id="mobile-topbar"><input id="menu-toggle" type="checkbox" label="toggle menu"/><label id="menu-icon" for="menu-toggle"><img src="/res/ham_menu.svg" alt=""/></label><svg class="lowered-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 146.5 167.8"><g transform="translate(-89.1 -67.7)"><path id="pth1" d="M154 81.6L99 177.2a35.5 35.5 0 1 0 61.6 35.5l55.2-95.6z" fill="none" stroke="#FF7B0F" stroke-width="10" stroke-linecap="round"></path><path fill="#FF7B0F" d="M133.4 145.4L111 184.2a21.2 21.2 0 0 0 7.9 29.4c10.6 6.1 23.4 2.7 29.5-7.9l34.8-60.3z"></path><rect fill="#FF7B0F" transform="rotate(30)" ry="4.9" y="-11.8" x="152.3" height="10.8" width="114.9"></rect></g></svg>SparkVial<div id="menu-icon-bg"></div><nav id="mobile-menu"><a class="menulink" href="/">Home</a><a class="menulink" href="/blog/">Blog</a><a class="menulink" href="/more/">More</a></nav></div><article><h1>Introduction</h1><p>I’ll explain my choices for the communication interfaces and the architecture in general.</p>
 
 <h1 id="the-problem">The problem</h1>
 
@@ -13,7 +13,7 @@
 
 <h2 id="prototype-hardware">Prototype hardware</h2>
 
-<p>Currently I’m prototyping using the Arduino Nano connected to a PC. This lets me test the USB + UART communication methods.</p>
+<p>Currently, I’m prototyping using the Arduino Nano connected to a PC. This lets me test the USB + UART communication methods.</p>
 
 <p>Later I will test BLE with the ESP-WROOM-32.</p>
 
@@ -27,7 +27,7 @@
 
 <p>It has some optional analog smoothing components and some pads for SMD components on the back.</p>
 
-<p>You can either solder the sensor on the SMD pads on the back or connect them on a seperate PCB (or Proto board). You also need to supply the board with 3-5v somehow, that’s up to the sensor manufacturer.</p>
+<p>You can either solder the sensor on the SMD pads on the back or connect them on a separate PCB (or Proto board). You also need to supply the board with 3-5v somehow, that’s up to the sensor manufacturer.</p>
 
 <p><img src="/res/blog/introduction/bb0.jpg" alt="Prototype PCB" /></p>
 
@@ -41,7 +41,7 @@
 <p>The protocol is the same as an HM-10.</p>
 
 <h3 id="usb">USB</h3>
-<p>A simple UART to USB converter is used, and can be used with a PC or an Android phone with OTG.</p>
+<p>A simple UART to USB converter is used and can be used with a PC or an Android phone with OTG.</p>
 
 <h3 id="uart-serial">UART (Serial)</h3>
 <p>Used to connect to data loggers or custom hardware (eg. robotics controllers?)</p>
@@ -56,10 +56,10 @@
 
 <p>Apple environments are a question mark because of their restricted nature, and the fact I don’t own a Mac.</p>
 
-<p>The bulk of the logic will be written as a portable C# library as thus will be portable right away.</p>
+<p>The bulk of the logic will be written as a portable C# library and thus will be portable right away.</p>
 
 <h2 id="the-mvp-minimal-viable-product">The MVP (Minimal Viable Product)</h2>
 <p>My MVP will be two Arduino Nanos, each as a different sensor (perhaps light and ultrasonic), each connected via USB to a Windows PC.</p>
 
-<p>The software will display each connected device, it’s immediate value, and a value/time graph of it’s value.</p>
+<p>The software will display each connected device, it’s immediate value, and a value/time graph of its value.</p>
 </article></body></html>
