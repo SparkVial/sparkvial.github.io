@@ -1,14 +1,22 @@
 @import '_sass/colors';
 
-p > img {
+p > img, img.post-image {
     display: block;
     max-height: 60vh;
     max-width: 100%;
     width: auto;
     height: auto;
     margin: 0 auto;
-    border-radius: 1vh;
     box-shadow: 0 0.6rem 2.3rem -0.5rem darken($box-shadow-color, 30%);
+    border-radius: 1vh;
+}
+
+p > img {
+}
+
+.homepage-image {
+    margin-top: 1rem !important;
+    border: solid 1px #999;
 }
 
 h1 {
@@ -72,6 +80,16 @@ ul {
     transition: top 0.2s, box-shadow 0.2s;
 }
 
+.card-link-header {
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+    font-size: calc(var(--article-font-size) * 1.2);
+    display: block;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
 .card-link:hover {
     top: -0.3em;
     box-shadow: 0 0.6rem 2.3rem -0.5rem darken($box-shadow-color, 30%);
@@ -81,8 +99,4 @@ ul {
     .card-link {
         width: calc(100% - 2 * 0.3em) !important;
     }
-}
-
-.card-link > h2 {
-    margin-top: 0.1rem;
 }

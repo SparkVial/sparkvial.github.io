@@ -4,6 +4,7 @@
     display: none;
     font-size: calc(1.7rem * 0.8);
     line-height: calc(var(--topbar-height) * 0.8);
+    user-select: none;
 }
 
 #mobile-topbar > svg {
